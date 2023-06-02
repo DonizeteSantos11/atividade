@@ -8,7 +8,7 @@ function Listagem( props ){
 							<p> Nome: {item.nome}</p>
 							<p> Status: {item.status == true ? "Ativo" : "Banido"}</p>
 							<p> Email: {item.email}</p>
-
+							<button className="btn btn-secondary btn-sm">Remover</button>
 						</div>
 					 )
 				}

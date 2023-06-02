@@ -1,4 +1,19 @@
 function Listagem( props ){
+
+
+	function remover(usuario){
+		//console.log(usuario)
+
+	 const novos_usuarios = props.usuarios.filter(item =>item.nome == usuario.nome)
+	 props.setUsuarios(novos_usuarios)
+	 
+
+	}
+
+
+
+
+
     return(
         <div className="caixa">
 				<h2> Listagem </h2>
@@ -8,7 +23,7 @@ function Listagem( props ){
 							<p> Nome: {item.nome}</p>
 							<p> Status: {item.status == true ? "Ativo" : "Banido"}</p>
 							<p> Email: {item.email}</p>
-							<button className="btn btn-secondary btn-sm">Remover</button>
+							<button  onClick={()=> remover(item)}    className="btn btn-secondary btn-sm">Remover</button>
 						</div>
 					 )
 				}

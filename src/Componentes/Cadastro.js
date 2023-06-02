@@ -12,7 +12,10 @@ function Cadastro({usuarios,setUsuarios}){
 
         function validaEmail(email){
             let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    //if (email.indexOF("@") == -1){}
             return re.test(email)
+
     
         }
             if(nome == ""){
@@ -90,7 +93,7 @@ function Cadastro({usuarios,setUsuarios}){
 
 					<form id="Forms"onSubmit={(e) => salvar(e)}>
 						<div class="form-floating mb-3">
-							<input onChange={e => setNome(e.target.value)} class="form-control" id="txtNome" placeholder="Nome"/>
+							<input onChange={e => setNome(e.target.value)} class="form-control" id="txtNome" placeholder="Nome" />
 							<label for="txtNome">Nome</label>
 						</div>
 
